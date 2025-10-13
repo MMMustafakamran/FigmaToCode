@@ -334,6 +334,13 @@ button {
     display: flex;
     flex-direction: column;
     gap: 60px;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .intro-text h2 {
@@ -348,6 +355,12 @@ button {
     font-size: 20px;
     line-height: 1.5;
     text-align: center;
+}
+
+.intro-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro-image img {
@@ -471,6 +484,8 @@ button {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-radius: 20px;
+    margin: 40px 20px;
 }
 
 .submission-overlay {
@@ -514,6 +529,19 @@ button {
     display: flex;
     flex-direction: column;
     gap: 60px;
+    align-items: center;
+    text-align: center;
+}
+
+.blessings-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blessings-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .blessings-image img {
@@ -534,6 +562,53 @@ button {
     font-size: 20px;
     line-height: 1.5;
     text-align: center;
+}
+
+/* Mobile Mockup Section */
+.mobile-mockup {
+    padding: 80px 0;
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.mockup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+}
+
+.mockup-text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mockup-text h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--color-white);
+}
+
+.mockup-text p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: var(--color-white);
+}
+
+.mockup-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mockup-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 20px;
 }
 
 /* Connect */
@@ -975,6 +1050,21 @@ button {
 
     .socials-mockups {
         display: block;
+        flex: 1;
+    }
+
+    .mockup-content {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .mockup-text {
+        flex: 1;
+        margin: 0;
+    }
+
+    .mockup-image {
         flex: 1;
     }
 
