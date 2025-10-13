@@ -605,14 +605,12 @@ button {
 }
 
 .footer-contact,
-.footer-learn-more,
-.footer-social {
+.footer-learn-more {
     text-align: center;
 }
 
 .footer-contact h3,
-.footer-learn-more h3,
-.footer-social h3 {
+.footer-learn-more h3 {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -850,8 +848,7 @@ button {
     }
 
     .footer-contact,
-    .footer-learn-more,
-    .footer-social {
+    .footer-learn-more {
         text-align: left;
         flex: 1;
     }
