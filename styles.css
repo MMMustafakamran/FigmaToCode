@@ -334,13 +334,6 @@ button {
     display: flex;
     flex-direction: column;
     gap: 60px;
-    align-items: center;
-    text-align: center;
-}
-
-.intro-text {
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 .intro-text h2 {
@@ -355,12 +348,6 @@ button {
     font-size: 20px;
     line-height: 1.5;
     text-align: center;
-}
-
-.intro-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .intro-image img {
@@ -484,8 +471,6 @@ button {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 20px;
-    margin: 40px 20px;
 }
 
 .submission-overlay {
@@ -529,19 +514,6 @@ button {
     display: flex;
     flex-direction: column;
     gap: 60px;
-    align-items: center;
-    text-align: center;
-}
-
-.blessings-text {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.blessings-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .blessings-image img {
@@ -566,49 +538,57 @@ button {
 
 /* Mobile Mockup Section */
 .mobile-mockup {
-    padding: 80px 0;
+    position: relative;
+    padding: 60px 0 20px 0;
     background: var(--color-primary);
     color: var(--color-white);
+    overflow: visible;
+    margin-bottom: 180px; /* Space for protruding mockups */
 }
 
 .mockup-content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 
 .mockup-text {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 500px;
+    padding: 0 20px;
 }
 
 .mockup-text h2 {
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: var(--color-white);
 }
 
 .mockup-text p {
-    font-size: 20px;
-    line-height: 1.5;
-    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 25px;
     color: var(--color-white);
 }
 
 .mockup-image {
+    position: relative;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    overflow: visible;
 }
 
 .mockup-image img {
     width: 100%;
     max-width: 800px;
     height: auto;
-    border-radius: 20px;
+    position: relative;
+    transform: translateY(10%);
+    z-index: 10;
 }
 
 /* Connect */
@@ -1053,19 +1033,42 @@ button {
         flex: 1;
     }
 
+    .mobile-mockup {
+        padding: 50px 0 10px 0;
+        margin-bottom: 220px;
+    }
+
     .mockup-content {
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         text-align: left;
+        gap: 40px;
     }
 
     .mockup-text {
         flex: 1;
-        margin: 0;
+        padding: 0;
+        text-align: left;
+        max-width: 400px;
+    }
+
+    .mockup-text h2 {
+        font-size: 48px;
+    }
+
+    .mockup-text p {
+        font-size: 19px;
     }
 
     .mockup-image {
-        flex: 1;
+        flex: 1.5;
+        justify-content: flex-end;
+    }
+
+    .mockup-image img {
+        width: 110%;
+        max-width: none;
+        transform: translateY(15%);
     }
 
     .footer-main {
@@ -1118,6 +1121,32 @@ button {
 
     .carousel {
         padding: 0 80px;
+    }
+
+    .mobile-mockup {
+        padding: 60px 0 15px 0;
+        margin-bottom: 280px;
+    }
+
+    .mockup-content {
+        gap: 60px;
+    }
+
+    .mockup-text {
+        max-width: 450px;
+    }
+
+    .mockup-text h2 {
+        font-size: 52px;
+    }
+
+    .mockup-text p {
+        font-size: 20px;
+    }
+
+    .mockup-image img {
+        width: 115%;
+        transform: translateY(20%);
     }
 }
 
@@ -1179,6 +1208,29 @@ button {
 
     .social-icons {
         display: none;
+    }
+
+    .mobile-mockup {
+        margin-bottom: 140px;
+        padding: 40px 0 15px 0;
+    }
+
+    .mockup-text {
+        max-width: 90%;
+    }
+
+    .mockup-text h2 {
+        font-size: 32px;
+    }
+
+    .mockup-text p {
+        font-size: 16px;
+    }
+
+    .mockup-image img {
+        width: 95%;
+        max-width: 600px;
+        transform: translateY(8%);
     }
 }
 
