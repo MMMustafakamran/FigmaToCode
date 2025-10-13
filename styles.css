@@ -536,59 +536,25 @@ button {
     text-align: center;
 }
 
-/* Mobile Mockup Section */
-.mobile-mockup {
-    position: relative;
-    padding: 60px 0 20px 0;
-    background: var(--color-primary);
-    color: var(--color-white);
-    overflow: visible;
-    margin-bottom: 180px; /* Space for protruding mockups */
+
+/* Socials Banner */
+.socials-banner {
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-.mockup-content {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    text-align: left;
-}
-
-.mockup-text {
-    max-width: 500px;
-    padding: 0 20px;
-}
-
-.mockup-text h2 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: var(--color-white);
-}
-
-.mockup-text p {
-    font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 25px;
-    color: var(--color-white);
-}
-
-.mockup-image {
-    position: relative;
+.socials-banner-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    overflow: visible;
+    align-items: center;
 }
 
-.mockup-image img {
+.socials-banner-container img {
     width: 100%;
-    max-width: 800px;
     height: auto;
-    position: relative;
-    transform: translateY(10%);
-    z-index: 10;
+    display: block;
 }
 
 /* Connect */
@@ -620,83 +586,6 @@ button {
     border-radius: 10px;
 }
 
-/* Socials */
-.socials {
-    position: relative;
-    background: var(--color-primary);
-    padding: 80px 0;
-    overflow: hidden;
-}
-
-.socials-pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    z-index: 0;
-}
-
-.socials-content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.socials-text {
-    color: var(--color-white);
-}
-
-.socials-text h2 {
-    font-size: 34px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.socials-text p {
-    font-size: 20px;
-    line-height: 1.2;
-    margin-bottom: 30px;
-}
-
-.social-icons-large {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-.social-icons-large a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s;
-}
-
-.social-icons-large a:hover {
-    opacity: 0.7;
-}
-
-.socials-mockups {
-    display: none;
-}
-
-.phone-mockup {
-    width: 100%;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-}
-
-.phone-mockups-image {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    margin: 0 auto;
-    display: block;
-}
 
 /* Footer */
 .footer {
@@ -1019,57 +908,7 @@ button {
         flex: 1;
     }
 
-    .socials-content {
-        flex-direction: row;
-        align-items: center;
-    }
 
-    .socials-text {
-        flex: 1;
-    }
-
-    .socials-mockups {
-        display: block;
-        flex: 1;
-    }
-
-    .mobile-mockup {
-        padding: 50px 0 10px 0;
-        margin-bottom: 220px;
-    }
-
-    .mockup-content {
-        flex-direction: row;
-        align-items: flex-start;
-        text-align: left;
-        gap: 40px;
-    }
-
-    .mockup-text {
-        flex: 1;
-        padding: 0;
-        text-align: left;
-        max-width: 400px;
-    }
-
-    .mockup-text h2 {
-        font-size: 48px;
-    }
-
-    .mockup-text p {
-        font-size: 19px;
-    }
-
-    .mockup-image {
-        flex: 1.5;
-        justify-content: flex-end;
-    }
-
-    .mockup-image img {
-        width: 110%;
-        max-width: none;
-        transform: translateY(15%);
-    }
 
     .footer-main {
         flex-direction: row;
@@ -1123,31 +962,6 @@ button {
         padding: 0 80px;
     }
 
-    .mobile-mockup {
-        padding: 60px 0 15px 0;
-        margin-bottom: 280px;
-    }
-
-    .mockup-content {
-        gap: 60px;
-    }
-
-    .mockup-text {
-        max-width: 450px;
-    }
-
-    .mockup-text h2 {
-        font-size: 52px;
-    }
-
-    .mockup-text p {
-        font-size: 20px;
-    }
-
-    .mockup-image img {
-        width: 115%;
-        transform: translateY(20%);
-    }
 }
 
 /* Mobile Navigation Menu */
@@ -1210,27 +1024,5 @@ button {
         display: none;
     }
 
-    .mobile-mockup {
-        margin-bottom: 140px;
-        padding: 40px 0 15px 0;
-    }
-
-    .mockup-text {
-        max-width: 90%;
-    }
-
-    .mockup-text h2 {
-        font-size: 32px;
-    }
-
-    .mockup-text p {
-        font-size: 16px;
-    }
-
-    .mockup-image img {
-        width: 95%;
-        max-width: 600px;
-        transform: translateY(8%);
-    }
 }
 
