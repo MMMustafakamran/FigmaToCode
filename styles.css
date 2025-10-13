@@ -646,6 +646,13 @@ button {
     opacity: 0.7;
 }
 
+.footer-learn-more h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    color: var(--color-white);
+}
+
 .social-icons-footer {
     display: flex;
     gap: 12px;
