@@ -22,55 +22,77 @@ const carouselPrev = document.getElementById('carouselPrev');
 const carouselNext = document.getElementById('carouselNext');
 const carouselItems = document.querySelectorAll('.carousel-item');
 
-let currentIndex = 0;
-let itemsPerView = 1;
+if (carouselTrack && carouselPrev && carouselNext && carouselItems.length) {
+    let currentIndex = 0;
+    let itemsPerView = 1;
 
-// Calculate items per view based on screen width
-function updateItemsPerView() {
-    if (window.innerWidth >= 1024) {
-        itemsPerView = 4;
-    } else if (window.innerWidth >= 768) {
-        itemsPerView = 2;
-    } else {
-        itemsPerView = 1;
+    function updateItemsPerView() {
+        if (window.innerWidth >= 1024) {
+            itemsPerView = 4;
+        } else if (window.innerWidth >= 768) {
+            itemsPerView = 2;
+        } else {
+            itemsPerView = 1;
+        }
     }
-}
 
-// Update carousel position
-function updateCarousel() {
-    const itemWidth = carouselItems[0].offsetWidth;
-    const gap = 27;
-    const offset = -(currentIndex * (itemWidth + gap));
-    carouselTrack.style.transform = `translateX(${offset}px)`;
-}
+    function updateCarousel() {
+        const itemWidth = carouselItems[0].offsetWidth;
+        const gap = 27;
+        const offset = -(currentIndex * (itemWidth + gap));
+        carouselTrack.style.transform = `translateX(${offset}px)`;
+    }
 
-// Previous button
-carouselPrev.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
+    carouselPrev.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    carouselNext.addEventListener('click', () => {
+        const maxIndex = carouselItems.length - itemsPerView;
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        updateItemsPerView();
+        currentIndex = 0;
         updateCarousel();
-    }
-});
+    });
 
-// Next button
-carouselNext.addEventListener('click', () => {
-    const maxIndex = carouselItems.length - itemsPerView;
-    if (currentIndex < maxIndex) {
-        currentIndex++;
-        updateCarousel();
-    }
-});
-
-// Update on resize
-window.addEventListener('resize', () => {
     updateItemsPerView();
-    currentIndex = 0;
     updateCarousel();
-});
 
-// Initialize
-updateItemsPerView();
-updateCarousel();
+    let autoAdvance = null;
+
+    function startAutoAdvance() {
+        autoAdvance = setInterval(() => {
+            const maxIndex = carouselItems.length - itemsPerView;
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        }, 5000);
+    }
+
+    function stopAutoAdvance() {
+        if (autoAdvance) {
+            clearInterval(autoAdvance);
+            autoAdvance = null;
+        }
+    }
+
+    carouselPrev.addEventListener('click', stopAutoAdvance);
+    carouselNext.addEventListener('click', stopAutoAdvance);
+
+    // startAutoAdvance();
+}
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -88,38 +110,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
-});
-
-// Optional: Auto-advance carousel
-let autoAdvance = null;
-
-function startAutoAdvance() {
-    autoAdvance = setInterval(() => {
-        const maxIndex = carouselItems.length - itemsPerView;
-        if (currentIndex < maxIndex) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
-        }
-        updateCarousel();
-    }, 5000); // Change every 5 seconds
-}
-
-function stopAutoAdvance() {
-    if (autoAdvance) {
-        clearInterval(autoAdvance);
-    }
-}
-
-// Start auto-advance (optional - uncomment to enable)
-// startAutoAdvance();
-
-// Pause auto-advance on user interaction
-carouselPrev.addEventListener('click', () => {
-    stopAutoAdvance();
-});
-
-carouselNext.addEventListener('click', () => {
-    stopAutoAdvance();
 });
 

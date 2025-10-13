@@ -256,22 +256,3 @@
     }
 }
 
-/* Footer overrides for this page */
-.footer {
-    position: relative;
-    overflow: hidden;
-}
-
-.footer-pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('images/d6bbe93bfba13a083b0ca49b2304d56239d27ff1.png');
-    background-repeat: repeat;
-    background-size: 300px 300px;
-    opacity: 0.2;
-    pointer-events: none;
-}
-

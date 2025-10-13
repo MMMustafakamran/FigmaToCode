@@ -1,3 +1,17 @@
+.footer-large-logo {
+    position: absolute;
+    top: 50%;
+    right: -260px;
+    transform: translateY(-50%);
+    width: 520px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.footer-large-logo img {
+    width: 100%;
+    height: auto;
+}
 /* CSS Reset and Variables */
 :root {
     --color-primary: #026419;
@@ -145,7 +159,7 @@ button {
 /* Hero Section */
 .hero {
     position: relative;
-    min-height: 600px;
+    min-height: 245px; /* match banner height so no extra gap */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,9 +182,7 @@ button {
 }
 
 .hero-content {
-    text-align: center;
-    padding: 100px 20px 60px;
-    max-width: 800px;
+    display: none; /* hide large hero text when used as a thin banner */
 }
 
 .hero-content h1 {
@@ -188,10 +200,7 @@ button {
 }
 
 .logo-overlay {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: none; /* hide floating logo for compact banner header */
 }
 
 .logo-overlay img {
@@ -560,6 +569,7 @@ button {
     background: var(--color-primary);
     color: var(--color-white);
     padding: 60px 0 30px;
+    overflow: hidden;
 }
 
 .footer-pattern {
@@ -568,8 +578,12 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.1;
+    background-image: url('images/d6bbe93bfba13a083b0ca49b2304d56239d27ff1.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    opacity: 0.2;
     z-index: 0;
+    pointer-events: none;
 }
 
 .footer .container {
@@ -577,18 +591,21 @@ button {
     z-index: 1;
 }
 
-.footer-logo-circles {
+.footer-top {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
     margin-bottom: 40px;
 }
 
 .footer-logo-circle {
-    width: 80px;
-    height: 80px;
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid var(--color-white);
+    border: 4px solid var(--color-white);
 }
 
 .footer-logo-circle img {
@@ -598,9 +615,10 @@ button {
 }
 
 .footer-content {
+    width: 100%;
     display: grid;
-    gap: 40px;
-    margin-bottom: 40px;
+    grid-template-columns: 1fr;
+    gap: 24px;
 }
 
 .footer-column h3 {
@@ -653,6 +671,21 @@ button {
 .footer-bottom p {
     font-size: 16px;
     line-height: 1.5;
+}
+
+.footer-large-logo {
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    width: 360px;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.footer-large-logo img {
+    width: 100%;
+    height: auto;
 }
 
 /* Buttons */
@@ -799,7 +832,7 @@ button {
     }
 
     .footer-content {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
@@ -810,18 +843,14 @@ button {
     }
 
     .hero {
-        min-height: 700px;
+        min-height: 245px;
     }
 
     .hero-content h1 {
         font-size: 56px;
     }
 
-    .logo-overlay {
-        bottom: 150px;
-    }
-
-    .logo-overlay img {
+    .logo-overlay img { /* kept for backward compatibility if shown elsewhere */
         width: 220px;
         height: 220px;
     }

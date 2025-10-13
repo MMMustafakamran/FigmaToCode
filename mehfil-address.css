@@ -1,0 +1,301 @@
+/* Mehfil Address Page Styles */
+
+/* Hero */
+.mehfil-hero {
+    position: relative;
+    height: 245px;
+    overflow: hidden;
+}
+
+.mehfil-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mehfil-hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Heading */
+.mehfil-heading {
+    background-image: linear-gradient(rgba(2, 100, 25, 0.4), rgba(2, 100, 25, 0.4)),
+                      url('images/7b1034977e98f0d39e1597d36983eb69775d9088.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 89px 20px;
+    text-align: center;
+}
+
+.mehfil-heading h1 {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--color-white);
+    line-height: 1.5;
+}
+
+/* Directory Section */
+.mehfil-directory {
+    padding: 80px 0;
+    background: var(--color-white);
+}
+
+.directory-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.directory-intro h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.directory-intro p {
+    font-size: 18px;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+.directory-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.control {
+    background: var(--color-white);
+    border: 1px solid rgba(2, 100, 25, 0.2);
+    border-radius: 12px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    color: var(--color-primary);
+}
+
+.control-button {
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.control-search {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.control-search input {
+    width: 100%;
+    border: none;
+    padding: 14px 50px 14px 20px;
+    font-size: 16px;
+    color: var(--color-primary);
+}
+
+.control-search input::placeholder {
+    color: rgba(2, 100, 25, 0.6);
+}
+
+.control-search button {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    background: var(--color-primary);
+    color: var(--color-white);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mehfil Cards */
+.mehfil-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.mehfil-card {
+    background: #F7F9F5;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.mehfil-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.mehfil-card-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-live {
+    background: rgba(2, 100, 25, 0.1);
+    color: var(--color-primary);
+}
+
+.mehfil-location {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-dark-green);
+}
+
+.mehfil-details {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.6;
+}
+
+.mehfil-card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mehfil-link {
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: underline;
+    width: fit-content;
+}
+
+.mehfil-contacts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 15px;
+    color: var(--color-primary);
+}
+
+.mehfil-contacts a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.mehfil-contacts span {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.page-btn {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--color-white);
+    border: 1px solid rgba(2, 100, 25, 0.2);
+    color: var(--color-primary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.page-btn:hover,
+.page-btn.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.page-ellipsis {
+    padding: 0 8px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .mehfil-heading h1 {
+        font-size: 32px;
+    }
+
+    .mehfil-heading {
+        padding: 60px 20px;
+    }
+
+    .directory-intro h2 {
+        font-size: 26px;
+    }
+
+    .directory-intro p {
+        font-size: 16px;
+    }
+
+    .mehfil-card {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .directory-controls {
+        flex-direction: row;
+    }
+
+    .mehfil-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .directory-controls {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .control {
+        min-width: 260px;
+    }
+
+    .mehfil-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .mehfil-card {
+        padding: 26px;
+    }
+}
+
+
