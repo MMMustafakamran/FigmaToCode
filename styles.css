@@ -114,10 +114,13 @@ button {
     gap: 20px;
 }
 
-.nav-container .nav-links {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+/* Desktop navigation centering - only applies on larger screens */
+@media (min-width: 768px) {
+    .nav-container .nav-links {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .nav-logo img {
@@ -161,11 +164,12 @@ button {
 }
 
 .mobile-menu-toggle {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 4px;
     background: transparent;
     padding: 5px;
+    cursor: pointer;
 }
 
 .mobile-menu-toggle span {
@@ -958,16 +962,49 @@ button {
         object-position: center top;
     }
 
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
+    .nav-container {
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
         background: var(--color-white);
+        flex-direction: column;
         padding: 20px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-right {
+        gap: 10px;
+        align-items: center;
+    }
+
+    .social-icons {
+        display: none;
     }
 }
 
