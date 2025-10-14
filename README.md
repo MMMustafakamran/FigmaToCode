@@ -1,8 +1,7 @@
 # Silsila Muhammadia Ameenia Idreesia - Website
 
 A complete responsive website built from Figma design using vanilla HTML, CSS, and JavaScript.
-
-## 🌟 Features
+##  Features
 
 - **Fully Responsive Design** - Optimized for mobile, tablet, and desktop
 - **Interactive Carousel** - Browse through Mehfils, Taleemat, Naat Shareef, and Wazaif
